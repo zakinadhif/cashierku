@@ -9,7 +9,7 @@ import {
 const router = createHashRouter([
   {
     path: "/",
-    element: <div>Hello world!</div>,
+    element: <button onClick={async () => console.log(await window.api.getTransactions())}></button>,
   },
 ]);
 
