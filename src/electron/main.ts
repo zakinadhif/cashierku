@@ -27,7 +27,7 @@ class Main {
   }
 
   private createWindow() {
-    const mainWindow = new BrowserWindow({
+    this.mainWindow = new BrowserWindow({
       height: 600,
       width: 800,
       webPreferences: {
@@ -35,8 +35,8 @@ class Main {
       },
     });
 
-    mainWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY);
-    mainWindow.webContents.openDevTools();
+    this.mainWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY);
+    this.mainWindow.webContents.openDevTools();
   }
 
   private onWindowAllClosed() {
